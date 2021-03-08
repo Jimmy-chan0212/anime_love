@@ -1,0 +1,12 @@
+=bootstrap_form_with model: @anime, local: true do |f|
+  =f.text_field :name
+  =f.text_field :release
+  =f.text_field :description
+  %hr
+
+  =f.fields_for :holy_grounds do |f_holy_ground|
+    -(1..5).each do |i|
+      =f_holy_ground.form_group "holy_ground_#{i}", label: {text: "holy_ground #{i}"} do
+        =f_holy_ground.hidden_field :id
+        =f_holy_ground.text_field_without_bootstrap :name, class: 'form-control'
+  =f.submit

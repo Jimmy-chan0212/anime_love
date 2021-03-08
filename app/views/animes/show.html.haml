@@ -1,0 +1,7 @@
+=@anime.name
+=@anime.release
+=@anime.description
+
+=link_to "anime", animes_path
+=link_to 'delete' ,anime_path(@anime), method: :delete, data: {confirm: "削除しますか？"}, class: 'readmore'
+=link_to "edit", edit_anime_path(@anime), class: 'readmore'
